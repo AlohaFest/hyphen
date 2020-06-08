@@ -10,3 +10,8 @@ $ go get -u -v github.com/golang/protobuf/{proto,protoc-gen-go}
 # install grpc
 ~/grpc-eg-go
 $ go get -u -v google.golang.org/grpc
+```
+# Generate Go Source Code from Protobuf
+```bash
+~/grpc-eg-go
+$ SRC_DIR=./
