@@ -15,3 +15,9 @@ $ go get -u -v google.golang.org/grpc
 ```bash
 ~/grpc-eg-go
 $ SRC_DIR=./
+$ DST_DIR=$SRC_DIR
+$ protoc -I=$SRC_DIR --go_out=plugins=grpc:$DST_DIR $SRC_DIR/machine/machine.proto
+```
+
+# Run
+```bash
