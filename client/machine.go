@@ -10,3 +10,10 @@ package main
 
 import (
 	"context"
+	"flag"
+	"io"
+	"log"
+	"time"
+
+	"github.com/toransahu/grpc-eg-go/machine"
+	"google.golang.org/grpc"
