@@ -17,3 +17,8 @@ import (
 
 	"github.com/toransahu/grpc-eg-go/machine"
 	"google.golang.org/grpc"
+)
+
+var (
+	serverAddr = flag.String("server_addr", "localhost:9111", "The server address in the format of host:port")
+)
