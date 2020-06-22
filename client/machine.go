@@ -22,3 +22,6 @@ import (
 var (
 	serverAddr = flag.String("server_addr", "localhost:9111", "The server address in the format of host:port")
 )
+
+func runExecute(client machine.MachineClient, instructions []*machine.Instruction) {
+	log.Printf("Streaming %v", instructions)
