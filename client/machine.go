@@ -25,3 +25,6 @@ var (
 
 func runExecute(client machine.MachineClient, instructions []*machine.Instruction) {
 	log.Printf("Streaming %v", instructions)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	stream, err := client.Execute(ctx)
