@@ -28,3 +28,6 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	stream, err := client.Execute(ctx)
+	if err != nil {
+		log.Fatalf("%v.Execute(ctx) = %v, %v: ", client, stream, err)
+	}
