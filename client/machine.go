@@ -31,3 +31,5 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 	if err != nil {
 		log.Fatalf("%v.Execute(ctx) = %v, %v: ", client, stream, err)
 	}
+	waitc := make(chan struct{})
+	go func() {
