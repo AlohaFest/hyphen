@@ -41,3 +41,8 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 				return
 			}
 			if err != nil {
+				log.Printf("Err: %v", err)
+			}
+			log.Printf("output: %v", result.GetOutput())
+		}
+	}()
