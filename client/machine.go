@@ -33,3 +33,11 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 	}
 	waitc := make(chan struct{})
 	go func() {
+		for {
+			result, err := stream.Recv()
+			if err == io.EOF {
+				log.Println("EOF")
+				close(waitc)
+				return
+			}
+			if err != nil {
