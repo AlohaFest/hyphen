@@ -46,3 +46,8 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 			log.Printf("output: %v", result.GetOutput())
 		}
 	}()
+
+	for _, instruction := range instructions {
+		if err := stream.Send(instruction); err != nil {
+			log.Fatalf("%v.Send(%v) = %v: ", stream, instruction, err)
+		}
