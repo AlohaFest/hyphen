@@ -69,3 +69,7 @@ func main() {
 		log.Fatalf("fail to dial: %v", err)
 	}
 	defer conn.Close()
+	client := machine.NewMachineClient(conn)
+
+	// try Execute()
+	instructions := []*machine.Instruction{
