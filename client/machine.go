@@ -51,3 +51,10 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 		if err := stream.Send(instruction); err != nil {
 			log.Fatalf("%v.Send(%v) = %v: ", stream, instruction, err)
 		}
+		time.Sleep(500 * time.Millisecond)
+	}
+	if err := stream.CloseSend(); err != nil {
+		log.Fatalf("%v.CloseSend() got error %v, want %v", stream, err, nil)
+	}
+	<-waitc
+}
