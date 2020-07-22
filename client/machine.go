@@ -58,3 +58,7 @@ func runExecute(client machine.MachineClient, instructions []*machine.Instructio
 	}
 	<-waitc
 }
+
+func main() {
+	flag.Parse()
+	var opts []grpc.DialOption
