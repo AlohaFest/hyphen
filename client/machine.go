@@ -79,3 +79,4 @@ func main() {
 		{Operand: 3, Operator: "PUSH"},
 		{Operator: "DIV"},
 		{Operand: 4, Operator: "PUSH"},
+		{Operator: "MUL"},
