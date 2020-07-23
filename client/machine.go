@@ -80,3 +80,8 @@ func main() {
 		{Operator: "DIV"},
 		{Operand: 4, Operator: "PUSH"},
 		{Operator: "MUL"},
+		{Operator: "FIB"},
+		{Operand: 5, Operator: "PUSH"},
+		{Operand: 6, Operator: "PUSH"},
+		{Operator: "SUB"},
+	}
