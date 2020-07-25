@@ -16,3 +16,9 @@ import (
 
 	"github.com/toransahu/grpc-eg-go/machine"
 	"github.com/toransahu/grpc-eg-go/server"
+	"google.golang.org/grpc"
+)
+
+var (
+	port = flag.Int("port", 9111, "Port on which gRPC server should listen TCP conn.")
+)
