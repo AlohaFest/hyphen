@@ -85,3 +85,6 @@ func main() {
 		{Operand: 6, Operator: "PUSH"},
 		{Operator: "SUB"},
 	}
+
+	runExecute(client, instructions)
+}
