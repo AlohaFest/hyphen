@@ -5,3 +5,9 @@
 //
 // Distributed under terms of the MIT license.
 //
+
+package main
+
+import (
+	"flag"
+	"fmt"
