@@ -22,3 +22,9 @@ import (
 var (
 	port = flag.Int("port", 9111, "Port on which gRPC server should listen TCP conn.")
 )
+
+func main() {
+	flag.Parse()
+	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
+	if err != nil {
+		log.Fatalf("failed to listen: %v", err)
