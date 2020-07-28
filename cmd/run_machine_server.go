@@ -28,3 +28,9 @@ func main() {
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
+	}
+	grpcServer := grpc.NewServer()
+	machine.RegisterMachineServer(grpcServer, &server.MachineServer{})
+	grpcServer.Serve(lis)
+	log.Printf("Initializing gRPC server on port %d", *port)
+}
