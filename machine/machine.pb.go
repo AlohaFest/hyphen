@@ -3,3 +3,6 @@
 // source: machine/machine.proto
 
 package machine
+
+import (
+	context "context"
