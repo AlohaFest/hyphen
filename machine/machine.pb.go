@@ -34,3 +34,8 @@ type Instruction struct {
 }
 
 func (m *Instruction) Reset()         { *m = Instruction{} }
+func (m *Instruction) String() string { return proto.CompactTextString(m) }
+func (*Instruction) ProtoMessage()    {}
+func (*Instruction) Descriptor() ([]byte, []int) {
+	return fileDescriptor_84b4f59d98cc997c, []int{0}
+}
