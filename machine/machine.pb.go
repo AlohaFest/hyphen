@@ -31,3 +31,6 @@ type Instruction struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Instruction) Reset()         { *m = Instruction{} }
