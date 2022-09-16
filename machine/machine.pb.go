@@ -39,3 +39,8 @@ func (*Instruction) ProtoMessage()    {}
 func (*Instruction) Descriptor() ([]byte, []int) {
 	return fileDescriptor_84b4f59d98cc997c, []int{0}
 }
+
+func (m *Instruction) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Instruction.Unmarshal(m, b)
+}
+func (m *Instruction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
