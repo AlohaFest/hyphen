@@ -57,3 +57,9 @@ func (m *Instruction) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Instruction proto.InternalMessageInfo
+
+func (m *Instruction) GetOperator() string {
+	if m != nil {
+		return m.Operator
+	}
+	return ""
