@@ -63,3 +63,11 @@ func (m *Instruction) GetOperator() string {
 		return m.Operator
 	}
 	return ""
+}
+
+func (m *Instruction) GetOperand() int32 {
+	if m != nil {
+		return m.Operand
+	}
+	return 0
+}
