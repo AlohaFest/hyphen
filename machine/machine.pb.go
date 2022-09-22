@@ -71,3 +71,10 @@ func (m *Instruction) GetOperand() int32 {
 	}
 	return 0
 }
+
+type Result struct {
+	Output               float32  `protobuf:"fixed32,1,opt,name=output,proto3" json:"output,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
