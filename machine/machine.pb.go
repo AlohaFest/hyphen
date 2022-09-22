@@ -78,3 +78,5 @@ type Result struct {
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
+
+func (m *Result) Reset()         { *m = Result{} }
