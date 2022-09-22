@@ -80,3 +80,7 @@ type Result struct {
 }
 
 func (m *Result) Reset()         { *m = Result{} }
+func (m *Result) String() string { return proto.CompactTextString(m) }
+func (*Result) ProtoMessage()    {}
+func (*Result) Descriptor() ([]byte, []int) {
+	return fileDescriptor_84b4f59d98cc997c, []int{1}
