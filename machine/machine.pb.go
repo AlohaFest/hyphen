@@ -97,3 +97,9 @@ func (m *Result) XXX_Merge(src proto.Message) {
 }
 func (m *Result) XXX_Size() int {
 	return xxx_messageInfo_Result.Size(m)
+}
+func (m *Result) XXX_DiscardUnknown() {
+	xxx_messageInfo_Result.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Result proto.InternalMessageInfo
