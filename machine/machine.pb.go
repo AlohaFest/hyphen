@@ -115,3 +115,9 @@ func init() {
 	proto.RegisterType((*Instruction)(nil), "machine.Instruction")
 	proto.RegisterType((*Result)(nil), "machine.Result")
 }
+
+func init() {
+	proto.RegisterFile("machine/machine.proto", fileDescriptor_84b4f59d98cc997c)
+}
+
+var fileDescriptor_84b4f59d98cc997c = []byte{
