@@ -107,3 +107,11 @@ var xxx_messageInfo_Result proto.InternalMessageInfo
 func (m *Result) GetOutput() float32 {
 	if m != nil {
 		return m.Output
+	}
+	return 0
+}
+
+func init() {
+	proto.RegisterType((*Instruction)(nil), "machine.Instruction")
+	proto.RegisterType((*Result)(nil), "machine.Result")
+}
