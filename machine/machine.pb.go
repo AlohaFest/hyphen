@@ -103,3 +103,7 @@ func (m *Result) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Result proto.InternalMessageInfo
+
+func (m *Result) GetOutput() float32 {
+	if m != nil {
+		return m.Output
