@@ -145,3 +145,11 @@ const _ = grpc.SupportPackageIsVersion6
 
 // MachineClient is the client API for Machine service.
 //
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type MachineClient interface {
+	Execute(ctx context.Context, opts ...grpc.CallOption) (Machine_ExecuteClient, error)
+}
+
+type machineClient struct {
+	cc grpc.ClientConnInterface
+}
