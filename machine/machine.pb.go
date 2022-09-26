@@ -153,3 +153,9 @@ type MachineClient interface {
 type machineClient struct {
 	cc grpc.ClientConnInterface
 }
+
+func NewMachineClient(cc grpc.ClientConnInterface) MachineClient {
+	return &machineClient{cc}
+}
+
+func (c *machineClient) Execute(ctx context.Context, opts ...grpc.CallOption) (Machine_ExecuteClient, error) {
