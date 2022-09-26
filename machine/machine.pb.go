@@ -171,3 +171,11 @@ type Machine_ExecuteClient interface {
 	Send(*Instruction) error
 	Recv() (*Result, error)
 	grpc.ClientStream
+}
+
+type machineExecuteClient struct {
+	grpc.ClientStream
+}
+
+func (x *machineExecuteClient) Send(m *Instruction) error {
+	return x.ClientStream.SendMsg(m)
