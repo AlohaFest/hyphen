@@ -180,3 +180,9 @@ type machineExecuteClient struct {
 func (x *machineExecuteClient) Send(m *Instruction) error {
 	return x.ClientStream.SendMsg(m)
 }
+
+func (x *machineExecuteClient) Recv() (*Result, error) {
+	m := new(Result)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
