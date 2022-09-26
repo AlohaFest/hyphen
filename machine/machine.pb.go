@@ -179,3 +179,4 @@ type machineExecuteClient struct {
 
 func (x *machineExecuteClient) Send(m *Instruction) error {
 	return x.ClientStream.SendMsg(m)
+}
