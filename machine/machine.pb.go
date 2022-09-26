@@ -166,3 +166,8 @@ func (c *machineClient) Execute(ctx context.Context, opts ...grpc.CallOption) (M
 	x := &machineExecuteClient{stream}
 	return x, nil
 }
+
+type Machine_ExecuteClient interface {
+	Send(*Instruction) error
+	Recv() (*Result, error)
+	grpc.ClientStream
