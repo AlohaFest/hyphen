@@ -159,3 +159,10 @@ func NewMachineClient(cc grpc.ClientConnInterface) MachineClient {
 }
 
 func (c *machineClient) Execute(ctx context.Context, opts ...grpc.CallOption) (Machine_ExecuteClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_Machine_serviceDesc.Streams[0], "/machine.Machine/Execute", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &machineExecuteClient{stream}
+	return x, nil
+}
