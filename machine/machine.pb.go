@@ -186,3 +186,10 @@ func (x *machineExecuteClient) Recv() (*Result, error) {
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
+	return m, nil
+}
+
+// MachineServer is the server API for Machine service.
+type MachineServer interface {
+	Execute(Machine_ExecuteServer) error
+}
