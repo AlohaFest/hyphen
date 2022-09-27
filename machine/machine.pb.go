@@ -212,3 +212,8 @@ func _Machine_Execute_Handler(srv interface{}, stream grpc.ServerStream) error {
 
 type Machine_ExecuteServer interface {
 	Send(*Result) error
+	Recv() (*Instruction, error)
+	grpc.ServerStream
+}
+
+type machineExecuteServer struct {
