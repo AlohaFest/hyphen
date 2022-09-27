@@ -205,3 +205,10 @@ func (*UnimplementedMachineServer) Execute(srv Machine_ExecuteServer) error {
 func RegisterMachineServer(s *grpc.Server, srv MachineServer) {
 	s.RegisterService(&_Machine_serviceDesc, srv)
 }
+
+func _Machine_Execute_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(MachineServer).Execute(&machineExecuteServer{stream})
+}
+
+type Machine_ExecuteServer interface {
+	Send(*Result) error
