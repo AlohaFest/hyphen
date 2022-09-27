@@ -193,3 +193,6 @@ func (x *machineExecuteClient) Recv() (*Result, error) {
 type MachineServer interface {
 	Execute(Machine_ExecuteServer) error
 }
+
+// UnimplementedMachineServer can be embedded to have forward compatible implementations.
+type UnimplementedMachineServer struct {
