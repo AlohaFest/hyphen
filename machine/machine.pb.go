@@ -199,3 +199,9 @@ type UnimplementedMachineServer struct {
 }
 
 func (*UnimplementedMachineServer) Execute(srv Machine_ExecuteServer) error {
+	return status.Errorf(codes.Unimplemented, "method Execute not implemented")
+}
+
+func RegisterMachineServer(s *grpc.Server, srv MachineServer) {
+	s.RegisterService(&_Machine_serviceDesc, srv)
+}
