@@ -196,3 +196,6 @@ type MachineServer interface {
 
 // UnimplementedMachineServer can be embedded to have forward compatible implementations.
 type UnimplementedMachineServer struct {
+}
+
+func (*UnimplementedMachineServer) Execute(srv Machine_ExecuteServer) error {
