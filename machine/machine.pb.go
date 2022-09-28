@@ -225,3 +225,9 @@ func (x *machineExecuteServer) Send(m *Result) error {
 }
 
 func (x *machineExecuteServer) Recv() (*Instruction, error) {
+	m := new(Instruction)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
