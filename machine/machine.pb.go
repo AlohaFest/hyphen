@@ -231,3 +231,12 @@ func (x *machineExecuteServer) Recv() (*Instruction, error) {
 	}
 	return m, nil
 }
+
+var _Machine_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "machine.Machine",
+	HandlerType: (*MachineServer)(nil),
+	Methods:     []grpc.MethodDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "Execute",
+			Handler:       _Machine_Execute_Handler,
