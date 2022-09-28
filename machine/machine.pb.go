@@ -217,3 +217,11 @@ type Machine_ExecuteServer interface {
 }
 
 type machineExecuteServer struct {
+	grpc.ServerStream
+}
+
+func (x *machineExecuteServer) Send(m *Result) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *machineExecuteServer) Recv() (*Instruction, error) {
