@@ -240,3 +240,9 @@ var _Machine_serviceDesc = grpc.ServiceDesc{
 		{
 			StreamName:    "Execute",
 			Handler:       _Machine_Execute_Handler,
+			ServerStreams: true,
+			ClientStreams: true,
+		},
+	},
+	Metadata: "machine/machine.proto",
+}
