@@ -4,3 +4,8 @@
 
 // Package mock_machine is a generated GoMock package.
 package mock_machine
+
+import (
+	context "context"
+	gomock "github.com/golang/mock/gomock"
+	machine "github.com/toransahu/grpc-eg-go/machine"
