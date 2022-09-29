@@ -13,3 +13,8 @@ import (
 	metadata "google.golang.org/grpc/metadata"
 	reflect "reflect"
 )
+
+// MockMachineClient is a mock of MachineClient interface
+type MockMachineClient struct {
+	ctrl     *gomock.Controller
+	recorder *MockMachineClientMockRecorder
