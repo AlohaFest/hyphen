@@ -24,3 +24,8 @@ type MockMachineClient struct {
 type MockMachineClientMockRecorder struct {
 	mock *MockMachineClient
 }
+
+// NewMockMachineClient creates a new mock instance
+func NewMockMachineClient(ctrl *gomock.Controller) *MockMachineClient {
+	mock := &MockMachineClient{ctrl: ctrl}
+	mock.recorder = &MockMachineClientMockRecorder{mock}
