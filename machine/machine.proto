@@ -13,3 +13,5 @@ message Instruction {
 }
 
 message Result {
+    float output = 1;
+}
