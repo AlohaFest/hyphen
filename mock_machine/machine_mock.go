@@ -29,3 +29,15 @@ type MockMachineClientMockRecorder struct {
 func NewMockMachineClient(ctrl *gomock.Controller) *MockMachineClient {
 	mock := &MockMachineClient{ctrl: ctrl}
 	mock.recorder = &MockMachineClientMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use
+func (m *MockMachineClient) EXPECT() *MockMachineClientMockRecorder {
+	return m.recorder
+}
+
+// Execute mocks base method
+func (m *MockMachineClient) Execute(arg0 context.Context, arg1 ...grpc.CallOption) (machine.Machine_ExecuteClient, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0}
