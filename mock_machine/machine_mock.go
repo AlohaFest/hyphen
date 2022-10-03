@@ -41,3 +41,6 @@ func (m *MockMachineClient) EXPECT() *MockMachineClientMockRecorder {
 func (m *MockMachineClient) Execute(arg0 context.Context, arg1 ...grpc.CallOption) (machine.Machine_ExecuteClient, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0}
+	for _, a := range arg1 {
+		varargs = append(varargs, a)
+	}
