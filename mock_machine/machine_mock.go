@@ -69,3 +69,16 @@ type MockMachine_ExecuteServerMockRecorder struct {
 }
 
 // NewMockMachine_ExecuteServer creates a new mock instance
+func NewMockMachine_ExecuteServer(ctrl *gomock.Controller) *MockMachine_ExecuteServer {
+	mock := &MockMachine_ExecuteServer{ctrl: ctrl}
+	mock.recorder = &MockMachine_ExecuteServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use
+func (m *MockMachine_ExecuteServer) EXPECT() *MockMachine_ExecuteServerMockRecorder {
+	return m.recorder
+}
+
+// Context mocks base method
+func (m *MockMachine_ExecuteServer) Context() context.Context {
