@@ -44,3 +44,13 @@ func (m *MockMachineClient) Execute(arg0 context.Context, arg1 ...grpc.CallOptio
 	for _, a := range arg1 {
 		varargs = append(varargs, a)
 	}
+	ret := m.ctrl.Call(m, "Execute", varargs...)
+	ret0, _ := ret[0].(machine.Machine_ExecuteClient)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Execute indicates an expected call of Execute
+func (mr *MockMachineClientMockRecorder) Execute(arg0 interface{}, arg1 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0}, arg1...)
