@@ -92,3 +92,4 @@ func (m *MockMachine_ExecuteServer) Context() context.Context {
 func (mr *MockMachine_ExecuteServerMockRecorder) Context() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).Context))
+}
