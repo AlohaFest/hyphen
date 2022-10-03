@@ -54,3 +54,10 @@ func (m *MockMachineClient) Execute(arg0 context.Context, arg1 ...grpc.CallOptio
 func (mr *MockMachineClientMockRecorder) Execute(arg0 interface{}, arg1 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0}, arg1...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Execute", reflect.TypeOf((*MockMachineClient)(nil).Execute), varargs...)
+}
+
+// MockMachine_ExecuteServer is a mock of Machine_ExecuteServer interface
+type MockMachine_ExecuteServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockMachine_ExecuteServerMockRecorder
