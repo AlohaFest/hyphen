@@ -61,3 +61,11 @@ func (mr *MockMachineClientMockRecorder) Execute(arg0 interface{}, arg1 ...inter
 type MockMachine_ExecuteServer struct {
 	ctrl     *gomock.Controller
 	recorder *MockMachine_ExecuteServerMockRecorder
+}
+
+// MockMachine_ExecuteServerMockRecorder is the mock recorder for MockMachine_ExecuteServer
+type MockMachine_ExecuteServerMockRecorder struct {
+	mock *MockMachine_ExecuteServer
+}
+
+// NewMockMachine_ExecuteServer creates a new mock instance
