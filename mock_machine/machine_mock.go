@@ -82,3 +82,8 @@ func (m *MockMachine_ExecuteServer) EXPECT() *MockMachine_ExecuteServerMockRecor
 
 // Context mocks base method
 func (m *MockMachine_ExecuteServer) Context() context.Context {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Context")
+	ret0, _ := ret[0].(context.Context)
+	return ret0
+}
