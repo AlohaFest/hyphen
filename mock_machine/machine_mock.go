@@ -87,3 +87,8 @@ func (m *MockMachine_ExecuteServer) Context() context.Context {
 	ret0, _ := ret[0].(context.Context)
 	return ret0
 }
+
+// Context indicates an expected call of Context
+func (mr *MockMachine_ExecuteServerMockRecorder) Context() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).Context))
