@@ -93,3 +93,12 @@ func (mr *MockMachine_ExecuteServerMockRecorder) Context() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).Context))
 }
+
+// Recv mocks base method
+func (m *MockMachine_ExecuteServer) Recv() (*machine.Instruction, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Recv")
+	ret0, _ := ret[0].(*machine.Instruction)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
