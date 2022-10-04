@@ -102,3 +102,13 @@ func (m *MockMachine_ExecuteServer) Recv() (*machine.Instruction, error) {
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
+
+// Recv indicates an expected call of Recv
+func (mr *MockMachine_ExecuteServerMockRecorder) Recv() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Recv", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).Recv))
+}
+
+// RecvMsg mocks base method
+func (m *MockMachine_ExecuteServer) RecvMsg(arg0 interface{}) error {
+	m.ctrl.T.Helper()
