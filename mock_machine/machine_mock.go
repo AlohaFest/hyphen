@@ -116,3 +116,11 @@ func (m *MockMachine_ExecuteServer) RecvMsg(arg0 interface{}) error {
 	ret0, _ := ret[0].(error)
 	return ret0
 }
+
+// RecvMsg indicates an expected call of RecvMsg
+func (mr *MockMachine_ExecuteServerMockRecorder) RecvMsg(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecvMsg", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).RecvMsg), arg0)
+}
+
+// Send mocks base method
