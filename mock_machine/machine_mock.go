@@ -112,3 +112,7 @@ func (mr *MockMachine_ExecuteServerMockRecorder) Recv() *gomock.Call {
 // RecvMsg mocks base method
 func (m *MockMachine_ExecuteServer) RecvMsg(arg0 interface{}) error {
 	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RecvMsg", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
