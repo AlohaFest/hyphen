@@ -146,3 +146,7 @@ func (m *MockMachine_ExecuteServer) SendHeader(arg0 metadata.MD) error {
 }
 
 // SendHeader indicates an expected call of SendHeader
+func (mr *MockMachine_ExecuteServerMockRecorder) SendHeader(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendHeader", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SendHeader), arg0)
+}
