@@ -136,3 +136,6 @@ func (mr *MockMachine_ExecuteServerMockRecorder) Send(arg0 interface{}) *gomock.
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Send", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).Send), arg0)
 }
+
+// SendHeader mocks base method
+func (m *MockMachine_ExecuteServer) SendHeader(arg0 metadata.MD) error {
