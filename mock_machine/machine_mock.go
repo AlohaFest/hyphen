@@ -139,3 +139,10 @@ func (mr *MockMachine_ExecuteServerMockRecorder) Send(arg0 interface{}) *gomock.
 
 // SendHeader mocks base method
 func (m *MockMachine_ExecuteServer) SendHeader(arg0 metadata.MD) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendHeader", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SendHeader indicates an expected call of SendHeader
