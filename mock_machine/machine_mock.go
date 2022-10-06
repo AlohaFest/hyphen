@@ -124,3 +124,8 @@ func (mr *MockMachine_ExecuteServerMockRecorder) RecvMsg(arg0 interface{}) *gomo
 }
 
 // Send mocks base method
+func (m *MockMachine_ExecuteServer) Send(arg0 *machine.Result) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Send", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
