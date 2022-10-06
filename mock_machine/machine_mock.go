@@ -150,3 +150,11 @@ func (mr *MockMachine_ExecuteServerMockRecorder) SendHeader(arg0 interface{}) *g
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendHeader", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SendHeader), arg0)
 }
+
+// SendMsg mocks base method
+func (m *MockMachine_ExecuteServer) SendMsg(arg0 interface{}) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendMsg", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
