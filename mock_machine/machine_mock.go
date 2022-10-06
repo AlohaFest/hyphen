@@ -158,3 +158,5 @@ func (m *MockMachine_ExecuteServer) SendMsg(arg0 interface{}) error {
 	ret0, _ := ret[0].(error)
 	return ret0
 }
+
+// SendMsg indicates an expected call of SendMsg
