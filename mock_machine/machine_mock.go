@@ -160,3 +160,6 @@ func (m *MockMachine_ExecuteServer) SendMsg(arg0 interface{}) error {
 }
 
 // SendMsg indicates an expected call of SendMsg
+func (mr *MockMachine_ExecuteServerMockRecorder) SendMsg(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SendMsg), arg0)
