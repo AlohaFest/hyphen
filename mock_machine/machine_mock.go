@@ -172,3 +172,9 @@ func (m *MockMachine_ExecuteServer) SetHeader(arg0 metadata.MD) error {
 	ret0, _ := ret[0].(error)
 	return ret0
 }
+
+// SetHeader indicates an expected call of SetHeader
+func (mr *MockMachine_ExecuteServerMockRecorder) SetHeader(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetHeader", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SetHeader), arg0)
+}
