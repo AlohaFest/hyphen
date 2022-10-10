@@ -169,3 +169,6 @@ func (mr *MockMachine_ExecuteServerMockRecorder) SendMsg(arg0 interface{}) *gomo
 func (m *MockMachine_ExecuteServer) SetHeader(arg0 metadata.MD) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetHeader", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
