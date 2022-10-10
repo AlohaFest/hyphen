@@ -178,3 +178,9 @@ func (mr *MockMachine_ExecuteServerMockRecorder) SetHeader(arg0 interface{}) *go
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetHeader", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SetHeader), arg0)
 }
+
+// SetTrailer mocks base method
+func (m *MockMachine_ExecuteServer) SetTrailer(arg0 metadata.MD) {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "SetTrailer", arg0)
+}
