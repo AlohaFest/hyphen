@@ -189,3 +189,7 @@ func (m *MockMachine_ExecuteServer) SetTrailer(arg0 metadata.MD) {
 func (mr *MockMachine_ExecuteServerMockRecorder) SetTrailer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetTrailer", reflect.TypeOf((*MockMachine_ExecuteServer)(nil).SetTrailer), arg0)
+}
+
+// MockMachine_ExecuteClient is a mock of Machine_ExecuteClient interface
+type MockMachine_ExecuteClient struct {
