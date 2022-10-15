@@ -233,3 +233,14 @@ func (m *MockMachine_ExecuteClient) Context() context.Context {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Context")
 	ret0, _ := ret[0].(context.Context)
+	return ret0
+}
+
+// Context indicates an expected call of Context
+func (mr *MockMachine_ExecuteClientMockRecorder) Context() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).Context))
+}
+
+// Header mocks base method
+func (m *MockMachine_ExecuteClient) Header() (metadata.MD, error) {
