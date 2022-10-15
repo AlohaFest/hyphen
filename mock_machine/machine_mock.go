@@ -227,3 +227,9 @@ func (mr *MockMachine_ExecuteClientMockRecorder) CloseSend() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseSend", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).CloseSend))
 }
+
+// Context mocks base method
+func (m *MockMachine_ExecuteClient) Context() context.Context {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Context")
+	ret0, _ := ret[0].(context.Context)
