@@ -220,3 +220,10 @@ func (m *MockMachine_ExecuteClient) CloseSend() error {
 	ret := m.ctrl.Call(m, "CloseSend")
 	ret0, _ := ret[0].(error)
 	return ret0
+}
+
+// CloseSend indicates an expected call of CloseSend
+func (mr *MockMachine_ExecuteClientMockRecorder) CloseSend() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseSend", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).CloseSend))
+}
