@@ -193,3 +193,15 @@ func (mr *MockMachine_ExecuteServerMockRecorder) SetTrailer(arg0 interface{}) *g
 
 // MockMachine_ExecuteClient is a mock of Machine_ExecuteClient interface
 type MockMachine_ExecuteClient struct {
+	ctrl     *gomock.Controller
+	recorder *MockMachine_ExecuteClientMockRecorder
+}
+
+// MockMachine_ExecuteClientMockRecorder is the mock recorder for MockMachine_ExecuteClient
+type MockMachine_ExecuteClientMockRecorder struct {
+	mock *MockMachine_ExecuteClient
+}
+
+// NewMockMachine_ExecuteClient creates a new mock instance
+func NewMockMachine_ExecuteClient(ctrl *gomock.Controller) *MockMachine_ExecuteClient {
+	mock := &MockMachine_ExecuteClient{ctrl: ctrl}
