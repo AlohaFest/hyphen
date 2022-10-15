@@ -215,3 +215,8 @@ func (m *MockMachine_ExecuteClient) EXPECT() *MockMachine_ExecuteClientMockRecor
 }
 
 // CloseSend mocks base method
+func (m *MockMachine_ExecuteClient) CloseSend() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CloseSend")
+	ret0, _ := ret[0].(error)
+	return ret0
