@@ -210,3 +210,8 @@ func NewMockMachine_ExecuteClient(ctrl *gomock.Controller) *MockMachine_ExecuteC
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use
+func (m *MockMachine_ExecuteClient) EXPECT() *MockMachine_ExecuteClientMockRecorder {
+	return m.recorder
+}
+
+// CloseSend mocks base method
