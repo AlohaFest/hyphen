@@ -205,3 +205,8 @@ type MockMachine_ExecuteClientMockRecorder struct {
 // NewMockMachine_ExecuteClient creates a new mock instance
 func NewMockMachine_ExecuteClient(ctrl *gomock.Controller) *MockMachine_ExecuteClient {
 	mock := &MockMachine_ExecuteClient{ctrl: ctrl}
+	mock.recorder = &MockMachine_ExecuteClientMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use
