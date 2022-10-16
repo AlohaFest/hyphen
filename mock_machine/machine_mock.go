@@ -244,3 +244,8 @@ func (mr *MockMachine_ExecuteClientMockRecorder) Context() *gomock.Call {
 
 // Header mocks base method
 func (m *MockMachine_ExecuteClient) Header() (metadata.MD, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Header")
+	ret0, _ := ret[0].(metadata.MD)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
