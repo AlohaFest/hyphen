@@ -254,3 +254,9 @@ func (m *MockMachine_ExecuteClient) Header() (metadata.MD, error) {
 // Header indicates an expected call of Header
 func (mr *MockMachine_ExecuteClientMockRecorder) Header() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Header", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).Header))
+}
+
+// Recv mocks base method
+func (m *MockMachine_ExecuteClient) Recv() (*machine.Result, error) {
+	m.ctrl.T.Helper()
