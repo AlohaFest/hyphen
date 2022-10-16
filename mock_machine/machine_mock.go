@@ -249,3 +249,8 @@ func (m *MockMachine_ExecuteClient) Header() (metadata.MD, error) {
 	ret0, _ := ret[0].(metadata.MD)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
+}
+
+// Header indicates an expected call of Header
+func (mr *MockMachine_ExecuteClientMockRecorder) Header() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
