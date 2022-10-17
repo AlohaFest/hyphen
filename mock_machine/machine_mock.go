@@ -260,3 +260,7 @@ func (mr *MockMachine_ExecuteClientMockRecorder) Header() *gomock.Call {
 // Recv mocks base method
 func (m *MockMachine_ExecuteClient) Recv() (*machine.Result, error) {
 	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Recv")
+	ret0, _ := ret[0].(*machine.Result)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
