@@ -306,3 +306,6 @@ func (m *MockMachine_ExecuteClient) SendMsg(arg0 interface{}) error {
 	ret := m.ctrl.Call(m, "SendMsg", arg0)
 	ret0, _ := ret[0].(error)
 	return ret0
+}
+
+// SendMsg indicates an expected call of SendMsg
