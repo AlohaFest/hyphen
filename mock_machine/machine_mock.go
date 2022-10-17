@@ -269,3 +269,5 @@ func (m *MockMachine_ExecuteClient) Recv() (*machine.Result, error) {
 // Recv indicates an expected call of Recv
 func (mr *MockMachine_ExecuteClientMockRecorder) Recv() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Recv", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).Recv))
+}
