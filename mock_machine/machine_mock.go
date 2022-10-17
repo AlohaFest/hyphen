@@ -279,3 +279,7 @@ func (m *MockMachine_ExecuteClient) RecvMsg(arg0 interface{}) error {
 	ret0, _ := ret[0].(error)
 	return ret0
 }
+
+// RecvMsg indicates an expected call of RecvMsg
+func (mr *MockMachine_ExecuteClientMockRecorder) RecvMsg(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
