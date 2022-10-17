@@ -302,3 +302,7 @@ func (mr *MockMachine_ExecuteClientMockRecorder) Send(arg0 interface{}) *gomock.
 
 // SendMsg mocks base method
 func (m *MockMachine_ExecuteClient) SendMsg(arg0 interface{}) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendMsg", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
