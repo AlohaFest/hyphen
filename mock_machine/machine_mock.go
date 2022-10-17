@@ -293,3 +293,12 @@ func (m *MockMachine_ExecuteClient) Send(arg0 *machine.Instruction) error {
 	ret0, _ := ret[0].(error)
 	return ret0
 }
+
+// Send indicates an expected call of Send
+func (mr *MockMachine_ExecuteClientMockRecorder) Send(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Send", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).Send), arg0)
+}
+
+// SendMsg mocks base method
+func (m *MockMachine_ExecuteClient) SendMsg(arg0 interface{}) error {
