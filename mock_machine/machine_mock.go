@@ -264,3 +264,8 @@ func (m *MockMachine_ExecuteClient) Recv() (*machine.Result, error) {
 	ret0, _ := ret[0].(*machine.Result)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
+}
+
+// Recv indicates an expected call of Recv
+func (mr *MockMachine_ExecuteClientMockRecorder) Recv() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
