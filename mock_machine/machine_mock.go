@@ -309,3 +309,10 @@ func (m *MockMachine_ExecuteClient) SendMsg(arg0 interface{}) error {
 }
 
 // SendMsg indicates an expected call of SendMsg
+func (mr *MockMachine_ExecuteClientMockRecorder) SendMsg(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).SendMsg), arg0)
+}
+
+// Trailer mocks base method
+func (m *MockMachine_ExecuteClient) Trailer() metadata.MD {
