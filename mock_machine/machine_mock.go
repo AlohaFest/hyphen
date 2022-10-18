@@ -316,3 +316,8 @@ func (mr *MockMachine_ExecuteClientMockRecorder) SendMsg(arg0 interface{}) *gomo
 
 // Trailer mocks base method
 func (m *MockMachine_ExecuteClient) Trailer() metadata.MD {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Trailer")
+	ret0, _ := ret[0].(metadata.MD)
+	return ret0
+}
