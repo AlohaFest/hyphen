@@ -321,3 +321,9 @@ func (m *MockMachine_ExecuteClient) Trailer() metadata.MD {
 	ret0, _ := ret[0].(metadata.MD)
 	return ret0
 }
+
+// Trailer indicates an expected call of Trailer
+func (mr *MockMachine_ExecuteClientMockRecorder) Trailer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Trailer", reflect.TypeOf((*MockMachine_ExecuteClient)(nil).Trailer))
+}
