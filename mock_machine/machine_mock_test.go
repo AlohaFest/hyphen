@@ -15,3 +15,8 @@ import (
 	"time"
 
 	gomock "github.com/golang/mock/gomock"
+	"github.com/toransahu/grpc-eg-go/machine"
+	mock_machine "github.com/toransahu/grpc-eg-go/mock_machine"
+)
+
+func testExecute(t *testing.T, client machine.MachineClient) {
