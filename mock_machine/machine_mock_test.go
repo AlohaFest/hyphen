@@ -34,3 +34,8 @@ func testExecute(t *testing.T, client machine.MachineClient) {
 	}
 	for _, instruction := range instructions {
 		if err := stream.Send(instruction); err != nil {
+			log.Fatalf("%v.Send(%v) = %v: ", stream, instruction, err)
+		}
+	}
+	result, err := stream.Recv()
+	if err != nil {
