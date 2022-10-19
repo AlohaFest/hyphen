@@ -22,3 +22,7 @@ import (
 func testExecute(t *testing.T, client machine.MachineClient) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
+
+	instructions := []*machine.Instruction{}
+	instructions = append(instructions, &machine.Instruction{Operand: 5, Operator: "PUSH"})
+	instructions = append(instructions, &machine.Instruction{Operand: 6, Operator: "PUSH"})
