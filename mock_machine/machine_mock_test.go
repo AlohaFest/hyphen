@@ -26,3 +26,11 @@ func testExecute(t *testing.T, client machine.MachineClient) {
 	instructions := []*machine.Instruction{}
 	instructions = append(instructions, &machine.Instruction{Operand: 5, Operator: "PUSH"})
 	instructions = append(instructions, &machine.Instruction{Operand: 6, Operator: "PUSH"})
+	instructions = append(instructions, &machine.Instruction{Operator: "MUL"})
+
+	stream, err := client.Execute(ctx)
+	if err != nil {
+		log.Fatalf("%v.Execute(%v) = _, %v: ", client, ctx, err)
+	}
+	for _, instruction := range instructions {
+		if err := stream.Send(instruction); err != nil {
