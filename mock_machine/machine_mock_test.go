@@ -39,3 +39,12 @@ func testExecute(t *testing.T, client machine.MachineClient) {
 	}
 	result, err := stream.Recv()
 	if err != nil {
+		log.Fatalf("%v.Recv() got error %v, want %v", stream, err, nil)
+	}
+
+	got := result.GetOutput()
+	want := float32(30)
+	if got != want {
+		t.Errorf("got %v, want %v", got, want)
+	}
+}
