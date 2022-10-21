@@ -53,3 +53,11 @@ func TestExecute(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
 	mockMachineClient := mock_machine.NewMockMachineClient(ctrl)
+
+	mockClientStream := mock_machine.NewMockMachine_ExecuteClient(ctrl)
+	mockClientStream.EXPECT().Send(gomock.Any()).Return(nil).AnyTimes()
+	mockClientStream.EXPECT().Recv().Return(&machine.Result{Output: 30}, nil)
+
+	mockMachineClient.EXPECT().Execute(
+		gomock.Any(), // context
+	).Return(mockClientStream, nil)
