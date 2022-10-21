@@ -48,3 +48,8 @@ func testExecute(t *testing.T, client machine.MachineClient) {
 		t.Errorf("got %v, want %v", got, want)
 	}
 }
+
+func TestExecute(t *testing.T) {
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+	mockMachineClient := mock_machine.NewMockMachineClient(ctrl)
