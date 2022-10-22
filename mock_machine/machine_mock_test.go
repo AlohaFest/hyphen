@@ -61,3 +61,6 @@ func TestExecute(t *testing.T) {
 	mockMachineClient.EXPECT().Execute(
 		gomock.Any(), // context
 	).Return(mockClientStream, nil)
+
+	testExecute(t, mockMachineClient)
+}
