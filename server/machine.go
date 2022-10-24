@@ -33,3 +33,6 @@ const (
 )
 
 type MachineServer struct{}
+
+// Execute runs the set of instructions given.
+func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
