@@ -25,3 +25,5 @@ type OperatorType string
 const (
 	PUSH OperatorType = "PUSH"
 	POP               = "POP"
+	ADD               = "ADD"
+	SUB               = "SUB"
