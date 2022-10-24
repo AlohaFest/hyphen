@@ -42,3 +42,7 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 		if err == io.EOF {
 			log.Println("EOF")
 			return nil
+		}
+		if err != nil {
+			return err
+		}
