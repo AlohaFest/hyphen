@@ -38,3 +38,7 @@ type MachineServer struct{}
 func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 	var stack stack.Stack
 	for {
+		instruction, err := stream.Recv()
+		if err == io.EOF {
+			log.Println("EOF")
+			return nil
