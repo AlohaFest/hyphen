@@ -27,3 +27,9 @@ const (
 	POP               = "POP"
 	ADD               = "ADD"
 	SUB               = "SUB"
+	MUL               = "MUL"
+	DIV               = "DIV"
+	FIB               = "FIB"
+)
+
+type MachineServer struct{}
