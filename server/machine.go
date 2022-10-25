@@ -50,3 +50,7 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 		operand := instruction.GetOperand()
 		operator := instruction.GetOperator()
 		op_type := OperatorType(operator)
+
+		fmt.Printf("Operand: %v, Operator: %v\n", operand, operator)
+
+		switch op_type {
