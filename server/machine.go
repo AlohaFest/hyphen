@@ -46,3 +46,7 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 		if err != nil {
 			return err
 		}
+
+		operand := instruction.GetOperand()
+		operator := instruction.GetOperator()
+		op_type := OperatorType(operator)
