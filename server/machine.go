@@ -61,3 +61,10 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 		case ADD, SUB, MUL, DIV:
 			item2, popped := stack.Pop()
 			item1, popped := stack.Pop()
+
+			if !popped {
+				return status.Error(codes.Aborted, "Invalid sets of instructions. Execution aborted")
+			}
+
+			var res float32
+			if op_type == ADD {
