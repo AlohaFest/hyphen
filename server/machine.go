@@ -68,3 +68,11 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 
 			var res float32
 			if op_type == ADD {
+				res = item1 + item2
+			} else if op_type == SUB {
+				res = item1 - item2
+			} else if op_type == MUL {
+				res = item1 * item2
+			} else if op_type == DIV {
+				res = item1 / item2
+			}
