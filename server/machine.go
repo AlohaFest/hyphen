@@ -76,3 +76,8 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 			} else if op_type == DIV {
 				res = item1 / item2
 			}
+
+			stack.Push(res)
+			if err := stream.Send(&machine.Result{Output: float32(res)}); err != nil {
+				return err
+			}
