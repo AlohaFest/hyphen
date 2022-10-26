@@ -58,3 +58,6 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 			stack.Push(float32(operand))
 		case POP:
 			stack.Pop()
+		case ADD, SUB, MUL, DIV:
+			item2, popped := stack.Pop()
+			item1, popped := stack.Pop()
