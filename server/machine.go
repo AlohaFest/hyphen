@@ -54,3 +54,7 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 		fmt.Printf("Operand: %v, Operator: %v\n", operand, operator)
 
 		switch op_type {
+		case PUSH:
+			stack.Push(float32(operand))
+		case POP:
+			stack.Pop()
