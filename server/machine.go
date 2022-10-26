@@ -81,3 +81,8 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 			if err := stream.Send(&machine.Result{Output: float32(res)}); err != nil {
 				return err
 			}
+		case FIB:
+			n, popped := stack.Pop()
+
+			if !popped {
+				return status.Error(codes.Aborted, "Invalid sets of instructions. Execution aborted")
