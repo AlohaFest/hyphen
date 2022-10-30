@@ -86,3 +86,7 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 
 			if !popped {
 				return status.Error(codes.Aborted, "Invalid sets of instructions. Execution aborted")
+			}
+
+			if op_type == FIB {
+				for f := range utils.FibonacciRange(int(n)) {
