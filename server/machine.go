@@ -90,3 +90,8 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 
 			if op_type == FIB {
 				for f := range utils.FibonacciRange(int(n)) {
+					if err := stream.Send(&machine.Result{Output: float32(f)}); err != nil {
+						return err
+					}
+				}
+			}
