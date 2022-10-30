@@ -95,3 +95,9 @@ func (s *MachineServer) Execute(stream machine.Machine_ExecuteServer) error {
 					}
 				}
 			}
+		default:
+			return status.Errorf(codes.Unimplemented, "Operation '%s' not implemented yet", operator)
+		}
+
+	}
+}
