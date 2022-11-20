@@ -37,3 +37,8 @@ func init() {
 }
 
 func bufDialer(context.Context, string) (net.Conn, error) {
+	return lis.Dial()
+}
+
+func testExecute_Live(t *testing.T, client machine.MachineClient, instructions []*machine.Instruction, wants []float32) {
+	log.Printf("Streaming %v", instructions)
