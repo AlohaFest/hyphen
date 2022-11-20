@@ -27,3 +27,8 @@ var lis *bufconn.Listener
 
 func init() {
 	lis = bufconn.Listen(bufSize)
+	s := grpc.NewServer()
+	machine.RegisterMachineServer(s, &MachineServer{})
+	go func() {
+		if err := s.Serve(lis); err != nil {
+			log.Fatalf("Server exited with error: %v", err)
