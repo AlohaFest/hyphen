@@ -50,3 +50,6 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 	}
 	waitc := make(chan struct{})
 	go func() {
+		i := 0
+		for {
+			result, err := stream.Recv()
