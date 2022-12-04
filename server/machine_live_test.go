@@ -53,3 +53,9 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 		i := 0
 		for {
 			result, err := stream.Recv()
+			if err == io.EOF {
+				log.Println("EOF")
+				close(waitc)
+				return
+			}
+			if err != nil {
