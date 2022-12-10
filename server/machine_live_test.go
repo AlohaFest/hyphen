@@ -59,3 +59,8 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 				return
 			}
 			if err != nil {
+				log.Printf("Err: %v", err)
+			}
+			log.Printf("output: %v", result.GetOutput())
+			got := result.GetOutput()
+			want := wants[i]
