@@ -70,3 +70,6 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 			i++
 		}
 	}()
+
+	for _, instruction := range instructions {
+		if err := stream.Send(instruction); err != nil {
