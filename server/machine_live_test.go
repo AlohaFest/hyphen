@@ -73,3 +73,5 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 
 	for _, instruction := range instructions {
 		if err := stream.Send(instruction); err != nil {
+			log.Fatalf("%v.Send(%v) = %v: ", stream, instruction, err)
+		}
