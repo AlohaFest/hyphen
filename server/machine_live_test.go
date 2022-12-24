@@ -75,3 +75,11 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 		if err := stream.Send(instruction); err != nil {
 			log.Fatalf("%v.Send(%v) = %v: ", stream, instruction, err)
 		}
+	}
+	if err := stream.CloseSend(); err != nil {
+		log.Fatalf("%v.CloseSend() got error %v, want %v", stream, err, nil)
+	}
+	<-waitc
+}
+
+func TestExecute_Live(t *testing.T) {
