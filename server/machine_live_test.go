@@ -83,3 +83,9 @@ func testExecute_Live(t *testing.T, client machine.MachineClient, instructions [
 }
 
 func TestExecute_Live(t *testing.T) {
+	ctx := context.Background()
+	conn, err := grpc.DialContext(ctx, "bufnet", grpc.WithContextDialer(bufDialer), grpc.WithInsecure())
+	if err != nil {
+		t.Fatalf("Failed to dial bufnet: %v", err)
+	}
+	defer conn.Close()
