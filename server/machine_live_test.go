@@ -89,3 +89,6 @@ func TestExecute_Live(t *testing.T) {
 		t.Fatalf("Failed to dial bufnet: %v", err)
 	}
 	defer conn.Close()
+	client := machine.NewMachineClient(conn)
+
+	// try Execute()
