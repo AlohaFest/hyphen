@@ -92,3 +92,9 @@ func TestExecute_Live(t *testing.T) {
 	client := machine.NewMachineClient(conn)
 
 	// try Execute()
+	instructions := []*machine.Instruction{
+		{Operand: 1, Operator: "PUSH"},
+		{Operand: 2, Operator: "PUSH"},
+		{Operator: "ADD"},
+		{Operand: 3, Operator: "PUSH"},
+		{Operator: "DIV"},
