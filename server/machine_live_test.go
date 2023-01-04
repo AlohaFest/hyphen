@@ -104,3 +104,7 @@ func TestExecute_Live(t *testing.T) {
 		{Operand: 5, Operator: "PUSH"},
 		{Operand: 6, Operator: "PUSH"},
 		{Operator: "SUB"},
+	}
+	wants := []float32{3, 1, 4, 0, 1, 1, 2, 3, -1}
+	testExecute_Live(t, client, instructions, wants)
+}
