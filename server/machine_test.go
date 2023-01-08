@@ -18,3 +18,8 @@ import (
 )
 
 func TestExecute(t *testing.T) {
+	s := MachineServer{}
+
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+	mockServerStream := mock_machine.NewMockMachine_ExecuteServer(ctrl)
