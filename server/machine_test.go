@@ -15,3 +15,6 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/toransahu/grpc-eg-go/machine"
 	"github.com/toransahu/grpc-eg-go/mock_machine"
+)
+
+func TestExecute(t *testing.T) {
