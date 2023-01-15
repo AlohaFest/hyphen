@@ -34,3 +34,5 @@ func TestExecute(t *testing.T) {
 	mockServerStream.EXPECT().Recv().Return(nil, io.EOF).After(callRecv6)
 	mockServerStream.EXPECT().Send(gomock.Any()).DoAndReturn(
 		func(result *machine.Result) error {
+			mockResults = append(mockResults, result)
+			return nil
