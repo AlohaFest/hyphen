@@ -36,3 +36,9 @@ func TestExecute(t *testing.T) {
 		func(result *machine.Result) error {
 			mockResults = append(mockResults, result)
 			return nil
+		}).AnyTimes()
+	wants := []float32{2, 5, 0, 1, 1, 2, 3, 5}
+
+	err := s.Execute(mockServerStream)
+	if err != nil {
+		t.Errorf("Execute(%v) got unexpected error: %v", mockServerStream, err)
