@@ -42,3 +42,9 @@ func TestExecute(t *testing.T) {
 	err := s.Execute(mockServerStream)
 	if err != nil {
 		t.Errorf("Execute(%v) got unexpected error: %v", mockServerStream, err)
+	}
+	for i, result := range mockResults {
+		got := result.GetOutput()
+		want := wants[i]
+		if got != want {
+			t.Errorf("got %v, want %v", got, want)
