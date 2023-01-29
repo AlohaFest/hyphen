@@ -48,3 +48,6 @@ func TestExecute(t *testing.T) {
 		want := wants[i]
 		if got != want {
 			t.Errorf("got %v, want %v", got, want)
+		}
+	}
+}
