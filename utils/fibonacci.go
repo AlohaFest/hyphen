@@ -17,3 +17,6 @@ func FibonacciRange(n int) <-chan int {
 		defer close(ch)
 		for i := 0; i <= n; i++ {
 			var f int
+			if i < 2 {
+				f = fn[i]
+			} else {
