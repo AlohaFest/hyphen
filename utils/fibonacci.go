@@ -7,3 +7,13 @@
 //
 
 package utils
+
+func FibonacciRange(n int) <-chan int {
+	ch := make(chan int)
+	fn := make([]int, n+1, n+2)
+	fn[0] = 0
+	fn[1] = 1
+	go func() {
+		defer close(ch)
+		for i := 0; i <= n; i++ {
+			var f int
