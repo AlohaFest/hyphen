@@ -20,3 +20,8 @@ func FibonacciRange(n int) <-chan int {
 			if i < 2 {
 				f = fn[i]
 			} else {
+				f = fn[i-1] + fn[i-2]
+			}
+			fn[i] = f
+			ch <- f
+		}
