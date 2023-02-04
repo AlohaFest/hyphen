@@ -25,3 +25,6 @@ func FibonacciRange(n int) <-chan int {
 			fn[i] = f
 			ch <- f
 		}
+	}()
+	return ch
+}
