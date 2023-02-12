@@ -17,3 +17,8 @@ func TestFibonacciRange(t *testing.T) {
 	i := 0
 	for f := range FibonacciRange(5) {
 		if f != fibOf5[i] {
+			t.Errorf("got %d, want %d", f, fibOf5[i])
+		}
+		i++
+	}
+}
