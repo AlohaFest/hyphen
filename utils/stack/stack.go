@@ -19,3 +19,10 @@ func (s *Stack) Push(input float32) {
 }
 
 func (s *Stack) Pop() (float32, bool) {
+	if s.IsEmpty() {
+		return -1.0, false
+	}
+	item := (*s)[len(*s)-1]
+	*s = (*s)[:len(*s)-1]
+	return item, true
+}
