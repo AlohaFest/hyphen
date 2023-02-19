@@ -16,3 +16,4 @@ func (s *Stack) IsEmpty() bool {
 
 func (s *Stack) Push(input float32) {
 	*s = append(*s, input)
+}
