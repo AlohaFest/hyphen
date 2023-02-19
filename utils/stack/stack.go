@@ -9,3 +9,10 @@
 package stack
 
 type Stack []float32
+
+func (s *Stack) IsEmpty() bool {
+	return len(*s) == 0
+}
+
+func (s *Stack) Push(input float32) {
+	*s = append(*s, input)
